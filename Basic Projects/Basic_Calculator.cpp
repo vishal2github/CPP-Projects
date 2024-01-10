@@ -1,7 +1,7 @@
 /*
     BASIC CALCULATOR
         
-        It is based on the four simple mathematical calulations on the two integer or decimal values and the print the required result. Only one mathematical operations can be performed among all four operations at a time.
+        It is based on the four simple mathematical calulations on the two integer or decimal values and prints the required result. Only one mathematical operation can be performed among all four operations at a time.
 */
 
 #include <iostream>
