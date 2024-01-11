@@ -12,7 +12,7 @@ using std::cin;
 using std::cout;
 
 const int PI = 3.14;
-int srn, x, y;
+int srn_choice, x, y;   // 'srn_choice' is 'Serial-number Choice'
 float a, b, res;
 
 void division()
@@ -23,7 +23,7 @@ void division()
      cin >> a;
      cout << "> Enter the divisor value: ";
      cin >> b;
-     res = a / b;
+     res = (a / b);
      cout << "\n>> The Division/Quotient of " << a << " to " << b << " is " << res << ".\n\n";
 }
 
@@ -35,7 +35,7 @@ void multiplication()
      cin >> a;
      cout << "> Enter the second value: ";
      cin >> b;
-     res = a * b;
+     res = (a * b);
      cout << "\n>> The Multiplication of " << a << " and " << b << " is " << res << ".\n\n";
 }
 
@@ -47,7 +47,7 @@ void subtraction()
      cin >> a;
      cout << "> Enter the second value: ";
      cin >> b;
-     res = a - b;
+     res = (a - b);
      cout << "\n>> The Subtraction of " << a << " to " << b << " is " << res << ".\n\n";
 }
 
@@ -59,7 +59,7 @@ void addition()
      cin >> a;
      cout << "> Enter the second value: ";
      cin >> b;
-     res = a + b;
+     res = (a + b);
      cout << "\n>> The Addition of " << a << " and " << b << " is " << res << ".\n\n";
 }
 
@@ -83,7 +83,7 @@ void modulus()
      cin >> x;
      cout << "> Enter the second value: ";
      cin >> y;
-     res = x % y;
+     res = (x % y);
      cout << "\n>> The Modulus of " << x << " to " << y << " is " << res << ".\n\n";
 }
 
@@ -202,7 +202,7 @@ void circle_area()
      Sleep(2000);
      cout << "\n> Enter the radius: ";
      cin >> a;
-     res = PI * a * a;
+     res = (PI * a * a);
      cout << "\n>> The area of circle with radius " << a << " is " << res << " unit-sq.\n\n";
 }
 
@@ -212,7 +212,7 @@ void square_area()
      Sleep(2000);
      cout << "\n> Enter the side length: ";
      cin >> a;
-     res = a * a;
+     res = (a * a);
      cout << "\n>> The area of square with side length " << a << " is " << res << " unit-sq.\n\n";
 }
 
@@ -255,11 +255,11 @@ int main()
      Sleep(2000);
 
      cout << "\n\nEnter the Serial-Number for the respective operation : \n";
-     cin >> srn;
+     cin >> srn_choice;
      Sleep(1000);
      cout << "\n";
 
-     switch (srn)
+     switch (srn_choice)
      {
      case 1:
           division();
