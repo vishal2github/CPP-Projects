@@ -1,7 +1,7 @@
 /*
     SCIENTIFIC CALCULATOR
-        
-        It is based on the multiple complex mathematical calulations (geometric, trigonometric and logarithmic) on the required integer or decimal values and prints the result. Only one mathematical operation can be performed among all other operations at a time.
+
+        It is based on the multiple complex mathematical calculations (geometric, trigonometric and logarithmic) on the required integer or decimal values and prints the result. Only one mathematical operation can be performed among all other operations at a time.
 */
 
 #include <iostream>
@@ -12,31 +12,19 @@ using std::cin;
 using std::cout;
 
 const int PI = 3.14;
-int srn_choice, x, y;   // 'srn_choice' is 'Serial-number Choice'
-float a, b, res;
+int srn_choice, x, y; // 'srn_choice' is 'Serial-number Choice'
+float a, b, c, res;
 
-void division()
+void addition()
 {
-     cout << "DIVISION OPERATION SELECTED\n";
-     Sleep(2000);
-     cout << "\n> Enter the dividend value: ";
-     cin >> a;
-     cout << "> Enter the divisor value: ";
-     cin >> b;
-     res = (a / b);
-     cout << "\n>> The Division/Quotient of " << a << " to " << b << " is " << res << ".\n\n";
-}
-
-void multiplication()
-{
-     cout << "MULTIPLICATION OPERATION SELECTED\n";
+     cout << "ADDITION OPERATION SELECTED\n";
      Sleep(2000);
      cout << "\n> Enter the first value: ";
      cin >> a;
      cout << "> Enter the second value: ";
      cin >> b;
-     res = (a * b);
-     cout << "\n>> The Multiplication of " << a << " and " << b << " is " << res << ".\n\n";
+     res = (a + b);
+     cout << "\n>> The Addition of " << a << " and " << b << " is " << res << ".\n\n";
 }
 
 void subtraction()
@@ -51,28 +39,28 @@ void subtraction()
      cout << "\n>> The Subtraction of " << a << " to " << b << " is " << res << ".\n\n";
 }
 
-void addition()
+void multiplication()
 {
-     cout << "ADDITION OPERATION SELECTED\n";
+     cout << "MULTIPLICATION OPERATION SELECTED\n";
      Sleep(2000);
      cout << "\n> Enter the first value: ";
      cin >> a;
      cout << "> Enter the second value: ";
      cin >> b;
-     res = (a + b);
-     cout << "\n>> The Addition of " << a << " and " << b << " is " << res << ".\n\n";
+     res = (a * b);
+     cout << "\n>> The Multiplication of " << a << " and " << b << " is " << res << ".\n\n";
 }
 
-void exponent()
+void division()
 {
-     cout << "EXPONENT OPERATION SELECTED\n";
+     cout << "DIVISION OPERATION SELECTED\n";
      Sleep(2000);
-     cout << "\n> Enter the value: ";
+     cout << "\n> Enter the dividend value: ";
      cin >> a;
-     cout << "> Enter the exponential value: ";
+     cout << "> Enter the divisor value: ";
      cin >> b;
-     res = pow(a, b);
-     cout << "\n>> The Exponent of " << a << " to " << b << " is " << res << ".\n\n";
+     res = (a / b);
+     cout << "\n>> The Division/Quotient of " << a << " to " << b << " is " << res << ".\n\n";
 }
 
 void modulus()
@@ -85,6 +73,18 @@ void modulus()
      cin >> y;
      res = (x % y);
      cout << "\n>> The Modulus of " << x << " to " << y << " is " << res << ".\n\n";
+}
+
+void exponent()
+{
+     cout << "EXPONENT OPERATION SELECTED\n";
+     Sleep(2000);
+     cout << "\n> Enter the value: ";
+     cin >> a;
+     cout << "> Enter the exponential value: ";
+     cin >> b;
+     res = pow(a, b);
+     cout << "\n>> The Exponent of " << a << " to " << b << " is " << res << ".\n\n";
 }
 
 void square_root()
@@ -216,6 +216,69 @@ void square_area()
      cout << "\n>> The area of square with side length " << a << " is " << res << " unit-sq.\n\n";
 }
 
+void rectangle_area()
+{
+     cout << "RECTANGLE AREA OPERATION SELECTED\n";
+     Sleep(2000);
+     cout << "\n> Enter the length: ";
+     cin >> a;
+     cout << "\n> Enter the breadth: ";
+     cin >> b;
+     res = (a * b);
+     cout << "\n>> The area of reactangle with length " << a << " and "
+          << "breadth " << b << " is " << res << " unit-sq.\n\n";
+}
+
+void common_triangle_area()
+{
+     // Common Triangle: A polygon with three angles and sides.
+
+     cout << "COMMON-TRIANGLE AREA OPERATION SELECTED\n";
+     Sleep(2000);
+     cout << "\n> Enter the base: ";
+     cin >> a;
+     cout << "\n> Enter the height: ";
+     cin >> b;
+     res = (0.5 * (a * b));
+     cout << "\n>> The area of the common triangle with base " << a << " and height " << b << " is " << res << " unit-sq.\n\n";
+}
+
+void common_triangle_perimeter()
+{
+     cout << "COMMON-TRIANGLE PERIMETER OPERATION SELECTED\n";
+     Sleep(2000);
+     cout << "\n> Enter the length of first side: ";
+     cin >> a;
+     cout << "\n> Enter the length of second side: ";
+     cin >> b;
+     cout << "\n> Enter the length of third side: ";
+     cin >> c;
+     res = (a + b + c);
+     cout << "\n>> The perimeter of the common triangle with sides " << a << ", " << b << " and " << c << " is " << res << " unit(s).\n\n";
+}
+
+void eqlat_triangle_area()
+{
+     // Equilateral Triangle: A triangle with all three sides of an equal length.
+
+     cout << "EQUILATERAL-TRIANGLE AREA OPERATION SELECTED\n";
+     Sleep(2000);
+     cout << "\n> Enter the side length: ";
+     cin >> a;
+     res = ((sqrt(3) / 4) * (a * a));
+     cout << "\n>> The area of an equilateral triangle with side length " << a << " is " << res << " unit-sq.\n\n";
+}
+
+void eqlat_triangle_perimeter()
+{
+     cout << "EQUILATERAL-TRIANGLE PERIMETER OPERATION SELECTED\n";
+     Sleep(2000);
+     cout << "\n> Enter the length of side: ";
+     cin >> a;
+     res = (3 * a);
+     cout << "\n>> The perimeter of an equilateral triangle with side length " << a << " is " << res << " unit(s).\n\n";
+}
+
 int main()
 {
      system("cls");
@@ -228,29 +291,45 @@ int main()
      cout << "Select the required operation's serial number from the list below.\n";
      cout << "\n";
 
-     cout << "1. Division\t\t"
-          << "2. Multiplication\t\t"
-          << "3. Subtraction\n";
+     cout << "BASIC OPERATIONS\n";
+     cout << "1. Addtion\t\t\t"
+          << "2. Subtraction\t\t\t"
+          << "3. Multiplication\t\t\t"
+          << "4. Division\t\t\t"
+          << "5. Modulus\n\n\n";
 
-     cout << "4. Addition\t\t"
-          << "5. Exponent\t\t\t"
-          << "6. Modulus\n";
+     cout << "EXPONENTIAL OPERATIONS\n"
+          << "6. Exponent\n\n\n";
 
-     cout << "7. Square Root\t\t"
-          << "8. Cube Root\t\t\t"
-          << "9. Sin\n";
+     cout << "ROOT OPERATIONS\n"
+          << "7. Square Root\t\t\t"
+          << "8. Cube Root\n\n\n";
 
-     cout << "10. Cos\t\t\t"
-          << "11. Tan\t\t\t\t"
-          << "12. Inverse of Sin\n";
+     cout << "TRIGONOMETRIC OPERATIONS\n"
+          << "9. Sin\t\t\t\t"
+          << "10. Cos\t\t\t\t"
+          << "11. Tan\n\n\n";
 
-     cout << "13. Inverse of Cos\t"
-          << "14. Inverse of Tan\t\t"
-          << "15. Log\n";
+     cout << "INVERSE-TRIGONOMETRIC OPERATIONS\n"
+          << "12. Inverse of Sin\t\t"
+          << "13. Inverse of Cos\t\t"
+          << "14. Inverse of Tan\n\n\n";
+     
+     cout << "LOGARITHMIC OPERATIONS\n"
+          << "15. Log\t\t\t\t"
+          << "16. Log-B-10\n\n\n";
 
-     cout << "16. Log-B-10\t\t"
-          << "17. Area of Cirle\t\t"
+// wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+     cout << "GEOMETRIC OPERATIONS\n"
+          << "17. Area of Cirle\t\t\t"
           << "18. Area of Square\n";
+
+     cout << "19. Area of Rectangle\t\t\t"
+          << "20. Common-Triangle Area\t\t"
+          << "21. Common-Triangle Perimeter\n";
+
+     cout << "22. Equilateral-Triangle Area\t\t"
+          << "23. Equilatral-Triangle Perimeter\t\t\t";
 
      Sleep(2000);
 
@@ -262,27 +341,27 @@ int main()
      switch (srn_choice)
      {
      case 1:
-          division();
-          break;
-
-     case 2:
-          multiplication();
-          break;
-
-     case 3:
-          subtraction();
-          break;
-
-     case 4:
           addition();
           break;
 
+     case 2:
+          subtraction();
+          break;
+
+     case 3:
+          multiplication();
+          break;
+
+     case 4:
+          division();
+          break;
+
      case 5:
-          exponent();
+          modulus();
           break;
 
      case 6:
-          modulus();
+          exponent();
           break;
 
      case 7:
@@ -331,6 +410,26 @@ int main()
 
      case 18:
           square_area();
+          break;
+
+     case 19:
+          rectangle_area();
+          break;
+
+     case 20:
+          common_triangle_area();
+          break;
+
+     case 21:
+          common_triangle_perimeter();
+          break;
+
+     case 22:
+          eqlat_triangle_area();
+          break;
+
+     case 23:
+          eqlat_triangle_perimeter();
           break;
 
      default:
