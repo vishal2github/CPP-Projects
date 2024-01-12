@@ -1,7 +1,9 @@
 /*
     MULTIPLICATION TABLE PROJECT
-
-        > A simple project based on mathematical table multiplication.
+        > A simple project based on mathematical table of multiplication with an unlimited multiplication range.
+    
+    IMPORTANT NOTE
+        > Use 'Ctrl + C', to terminate the execution process, in order to avoid any harm to your system in case of an accidental execution with the objectionable multiplication-range that your system is incapable of handeling!
 */
 
 #include <iostream>
