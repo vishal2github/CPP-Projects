@@ -314,12 +314,12 @@ int main()
           << "12. Inverse of Sin\t\t"
           << "13. Inverse of Cos\t\t"
           << "14. Inverse of Tan\n\n\n";
-     
+
      cout << "LOGARITHMIC OPERATIONS\n"
           << "15. Log\t\t\t\t"
           << "16. Log-B-10\n\n\n";
 
-// wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+     // wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
      cout << "GEOMETRIC OPERATIONS\n"
           << "17. Area of Cirle\t\t\t"
           << "18. Area of Square\n";
@@ -340,94 +340,85 @@ int main()
 
      switch (srn_choice)
      {
+     // Basic Operation Case(s)
      case 1:
           addition();
           break;
-
      case 2:
           subtraction();
           break;
-
      case 3:
           multiplication();
           break;
-
      case 4:
           division();
           break;
-
      case 5:
           modulus();
           break;
 
+     // Exponential Operation Case(s)
      case 6:
           exponent();
           break;
 
+     // Root Operation Case(s)
      case 7:
           square_root();
           break;
-
      case 8:
           cube_root();
           break;
 
+     // Trigonometric Operation Case(s)
      case 9:
           sin();
           break;
-
      case 10:
           cos();
           break;
-
      case 11:
           tan();
           break;
 
+     // Inverse-trigonometric Operation Case(s)
      case 12:
           arc_sin();
           break;
-
      case 13:
           arc_cos();
           break;
-
      case 14:
           arc_tan();
           break;
 
+     // Logarithmic Operation Case(s)
      case 15:
           log();
           break;
-
      case 16:
           log_b10();
           break;
 
+     // Geometric Operation Case(s)
      case 17:
           circle_area();
           break;
-
      case 18:
           square_area();
           break;
-
      case 19:
           rectangle_area();
           break;
-
      case 20:
           common_triangle_area();
           break;
-
      case 21:
           common_triangle_perimeter();
           break;
-
      case 22:
           eqlat_triangle_area();
           break;
-
      case 23:
           eqlat_triangle_perimeter();
           break;
