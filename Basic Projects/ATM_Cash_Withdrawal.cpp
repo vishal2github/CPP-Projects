@@ -59,7 +59,7 @@ int main()
 
             Sleep(5000);
 
-            cout << "\n$ " << amt << " HAS BEEN DISPENSED IN TRAY."
+            cout << "\n$" << amt << " HAS BEEN DISPENSED IN TRAY."
                  << "\n";
 
             Sleep(2000);
