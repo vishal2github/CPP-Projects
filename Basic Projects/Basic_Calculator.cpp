@@ -1,6 +1,6 @@
 /*
     BASIC CALCULATOR
-        
+
         It is based on the four simple mathematical calulations on the two integer or decimal values and prints the required result. Only one mathematical operation can be performed among all four operations at a time.
 */
 
@@ -10,83 +10,87 @@
 using std::cin;
 using std::cout;
 
-char ch;
-float a, b, result;
-
-void add()
+class Calculator
 {
-    cout << ":: ADDITION OPERATION SELECTED ::\n";
+private:
+    float a, b, result;
 
-    float a, b, r;
-    cout << "\nENTER TWO NUMBERS";
-    cout << "\nThe first number is: ";
-    cin >> a;
-    cout << "The second number is: ";
-    cin >> b;
+public:
+    void add()
+    {
+        cout << ":: ADDITION OPERATION SELECTED ::\n";
 
-    r = (a + b);
+        float a, b, r;
+        cout << "\nENTER TWO NUMBERS";
+        cout << "\nThe first number is: ";
+        cin >> a;
+        cout << "The second number is: ";
+        cin >> b;
 
-    cout << "\nThe addition of " << a << " and " << b << " is " << r << ".\n";
-}
+        r = (a + b);
 
-void sub()
-{
-    cout << ":: SUBTRACTION OPERATION SELECTED ::\n";
+        cout << "\nThe addition of " << a << " and " << b << " is " << r << ".\n";
+    }
 
-    float a, b, r;
-    cout << "\nENTER TWO NUMBERS";
-    cout << "\nThe first number is: ";
-    cin >> a;
-    cout << "The second number is: ";
-    cin >> b;
+    void sub()
+    {
+        cout << ":: SUBTRACTION OPERATION SELECTED ::\n";
 
-    r = (a - b);
+        float a, b, r;
+        cout << "\nENTER TWO NUMBERS";
+        cout << "\nThe first number is: ";
+        cin >> a;
+        cout << "The second number is: ";
+        cin >> b;
 
-    cout << "\nThe subtraction of " << a << " and " << b << " is " << r << ".\n";
-}
+        r = (a - b);
 
-void mul()
-{
-    cout << ":: MULTIPLICATION OPERATION SELECTED ::\n";
+        cout << "\nThe subtraction of " << a << " and " << b << " is " << r << ".\n";
+    }
 
-    float a, b, r;
-    cout << "\nENTER TWO NUMBERS";
-    cout << "\nThe first number is: ";
-    cin >> a;
-    cout << "The second number is: ";
-    cin >> b;
+    void mul()
+    {
+        cout << ":: MULTIPLICATION OPERATION SELECTED ::\n";
 
-    r = (a * b);
+        float a, b, r;
+        cout << "\nENTER TWO NUMBERS";
+        cout << "\nThe first number is: ";
+        cin >> a;
+        cout << "The second number is: ";
+        cin >> b;
 
-    cout << "\nThe multiplication of " << a << " and " << b << " is " << r << ".\n";
-}
+        r = (a * b);
 
-void div()
-{
-    cout << ":: DIVISION OPERATION SELECTED ::\n";
+        cout << "\nThe multiplication of " << a << " and " << b << " is " << r << ".\n";
+    }
 
-    float a, b, r;
-    cout << "\nENTER TWO NUMBERS";
-    cout << "\nThe first number is: ";
-    cin >> a;
-    cout << "The second number is: ";
-    cin >> b;
+    void div()
+    {
+        cout << ":: DIVISION OPERATION SELECTED ::\n";
 
-    r = (a / b);
+        float a, b, r;
+        cout << "\nENTER TWO NUMBERS";
+        cout << "\nThe first number is: ";
+        cin >> a;
+        cout << "The second number is: ";
+        cin >> b;
 
-    cout << "\nThe division of " << a << " and " << b << " is " << r << ".\n";
-}
+        r = (a / b);
+
+        cout << "\nThe division of " << a << " and " << b << " is " << r << ".\n";
+    }
+};
 
 int main()
 {
     system("cls");
 
+    Calculator c1;
+
+    char ch;
     cout << "\nEnter any two numbers whether in form of an integer, decimal or a combination of two.";
-
     Sleep(2000);
-
     cout << "\nThe operation is performed on the basis of operator selected.";
-
     Sleep(2000);
 
     cout << "\n\nENTER THE OPERATOR (/,*,+,-) : ";
@@ -95,19 +99,19 @@ int main()
 
     if (ch == '+')
     {
-        add();
+        c1.add();
     }
     else if (ch == '-')
     {
-        sub();
+        c1.sub();
     }
     else if (ch == '*')
     {
-        mul();
+        c1.mul();
     }
     else if (ch == '/')
     {
-        div();
+        c1.div();
     }
     else
     {
@@ -115,7 +119,6 @@ int main()
     }
 
     Sleep(2000);
-
     cout << "\nPROCESS TERMINATED!\n\n";
 
     system("pause");
