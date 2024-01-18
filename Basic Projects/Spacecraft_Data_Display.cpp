@@ -22,12 +22,13 @@ class Spacecraft
 private:
     int k;
     char x;
+    void spacecraft_Code();
 
 public:
-    void Spacecraft_Code();
+    void launch_process();
 };
 
-void Spacecraft ::Spacecraft_Code()
+void Spacecraft ::spacecraft_Code()
 {
     cout << "SPACECRAFT STATUS\n";
     Sleep(2000);
@@ -136,11 +137,11 @@ void Spacecraft ::Spacecraft_Code()
     else if ((x == 'N') || (x == 'n'))
 
     {
-        cout << "WARNING!\n";
+        cout << "\nWARNING!\n";
         Sleep(1000);
         cout << "IGNITION PROCESS POSTPONED!\n";
         Sleep(2000);
-        cout << "SPACECRAFT(S) LAUNCH PROCEDURE HALTED!\n";
+        cout << "SPACECRAFT(S) LAUNCH PROCEDURE HALTED!\n\n";
         exit(0);
     }
 
@@ -150,12 +151,8 @@ void Spacecraft ::Spacecraft_Code()
     }
 }
 
-int main()
+void Spacecraft ::launch_process()
 {
-    system("cls");
-
-    Spacecraft s1;
-
     int i, j;
     cout << "ENTER THE NUMBER OF SPACECRAFT(S) YOU WANT TO LAUNCH ONE BY ONE\n";
     cin >> j;
@@ -169,7 +166,7 @@ int main()
             Sleep(2000);
             cout << "\n\nSPACECRAFT " << i << " LAUNCH INITIATION\n\n";
             Sleep(2000);
-            s1.Spacecraft_Code();
+            spacecraft_Code();
             Sleep(1000);
             cout << "\nSPACECRAFT " << i << " MISSION COMPLETED!\n\n";
             Sleep(2000);
@@ -180,6 +177,16 @@ int main()
         cout << "ALERT\n";
         cout << "SPACECRAFT NOT FOUND!\n\n";
     }
+}
+
+int main()
+{
+    system("cls");
+
+    Spacecraft s1;
+    s1.launch_process();
+
+    system("pause");
 
     return 0;
 }
