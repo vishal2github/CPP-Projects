@@ -9,16 +9,56 @@
 using std::cin;
 using std::cout;
 
-void power_w();
-void power_kw();
-
-float amps, volts, powr, time, erg;
-int swc;
-
-int main()
+class Calculation
 {
-    system("cls");
+private:
+    float amps, volts, powr, time, erg;
+    void power_w(void);
+    void power_kw(void);
 
+public:
+    void calc_process(void);
+};
+
+void Calculation ::power_w()
+{
+    cout << "\n\n>>> POWER CALCULATION (W)\n\n";
+
+    cout << "Enter the Ampere(s) in A: ";
+    cin >> amps;
+    cout << "Enter the Volt(s) in V: ";
+    cin >> volts;
+    powr = amps * volts;
+    cout << "Net Power: " << powr << " W\n\n";
+
+    cout << ">>> ENERGY CALCULATION (W-Hr)\n";
+    cout << "\nEnter the Time in Hr: ";
+    cin >> time;
+    erg = powr * time;
+    cout << "Net Energy: " << erg << " W-Hr\n\n";
+}
+
+void Calculation ::power_kw()
+{
+    cout << "\n\n>>> POWER CALCULATION (KW)\n\n";
+
+    cout << "Enter the Ampere(s) in KA: ";
+    cin >> amps;
+    cout << "Enter the Volt(s) in KV: ";
+    cin >> volts;
+    powr = amps * volts;
+    cout << "Net Power: " << powr << " KW\n\n";
+
+    cout << ">>> ENERGY CALCULATION (KW-Hr)\n";
+    cout << "\nEnter the Time in Hr: ";
+    cin >> time;
+    erg = powr * time;
+    cout << "Net Energy: " << erg << " KW-Hr\n\n";
+}
+
+void Calculation ::calc_process()
+{
+    int swc;
     cout << "*** POWER AND ENERGY CALCULATION ***\n\n";
     cout << "1. Watt Mode\n";
     cout << "2. Kilo-Watt Mode\n\n";
@@ -41,44 +81,16 @@ int main()
     }
 
     cout << "\nPROCESS TERMINATED!\n\n";
+}
+
+int main()
+{
+    system("cls");
+
+    Calculation c1;
+    c1.calc_process();
 
     system("pause");
 
     return 0;
-}
-
-void power_w()
-{
-    cout << "\n\n>>> POWER CALCULATION (W)\n\n";
-
-    cout << "Enter the Ampere(s) in A: ";
-    cin >> amps;
-    cout << "Enter the Volt(s) in V: ";
-    cin >> volts;
-    powr = amps * volts;
-    cout << "Net Power: " << powr << " W\n\n";
-
-    cout << ">>> ENERGY CALCULATION (W-Hr)\n";
-    cout << "\nEnter the Time in Hr: ";
-    cin >> time;
-    erg = powr * time;
-    cout << "Net Energy: " << erg << " W-Hr\n\n";
-}
-
-void power_kw()
-{
-    cout << "\n\n>>> POWER CALCULATION (KW)\n\n";
-
-    cout << "Enter the Ampere(s) in KA: ";
-    cin >> amps;
-    cout << "Enter the Volt(s) in KV: ";
-    cin >> volts;
-    powr = amps * volts;
-    cout << "Net Power: " << powr << " KW\n\n";
-
-    cout << ">>> ENERGY CALCULATION (KW-Hr)\n";
-    cout << "\nEnter the Time in Hr: ";
-    cin >> time;
-    erg = powr * time;
-    cout << "Net Energy: " << erg << " KW-Hr\n\n";
 }
