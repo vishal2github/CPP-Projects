@@ -58,7 +58,7 @@ void Debit ::process()
           {
                Sleep(2000);
 
-               cout << "ENTER THE WITHDRAW AMOUNT:"
+               cout << "ENTER THE WITHDRAWAL AMOUNT:"
                     << "\n";
                cout << "$ ";
                cin >> amt;
