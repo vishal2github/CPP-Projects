@@ -3,7 +3,7 @@
 
         > This program asks for user permission in yes and no for launch initiation of an imaginary spacecraft.
         > As our imagined spacecraft takes-off, the information regarding spacecraft technicals displays during entire mission.
-        > It can initiate multiple spacecraft objects (Spacecraft class multiple objects) in series, but once the ignition process is postponed, then all other object-spacecraft's launching procedure will be cancelled. (That is, program won't ask for rest of theobjects in series once used has postponed the ignition process at any serial number of object).  
+        > One can create multiple objects. Each object can initiate the multiple spacecrafts in series, untill anywhere at the serial point the ingition process is postponed.
 
         >> NOTE
             > In actual, the spacecraft sends the data signals to the satellite receivers of ground station, so this simplified program is only a replication of terminal output of spacecraft data signals in form of human-readable text.
@@ -40,7 +40,7 @@ void Spacecraft ::Spacecraft_Code()
 
     if ((x == 'Y') || (x == 'y'))
     {
-        // FLIGHT PROCEDURES _________________________________________________________________________
+        // FLIGHT STATUS-DATA _________________________________________________________________________
 
         Sleep(2000);
         cout << "\nIGNITION STATUS\n";
@@ -125,7 +125,7 @@ void Spacecraft ::Spacecraft_Code()
         Sleep(2000);
         cout << "MODULE 3 DISENGAGED\n\n";
 
-        // PAYLOAD PROCEDURES _______________________________________________________________________________
+        // PAYLOAD STATUS-DATA _______________________________________________________________________________
 
         Sleep(2000);
         cout << "PAYLOAD STATUS\n";
@@ -162,15 +162,23 @@ int main()
     cout << "\n";
     Sleep(2000);
 
-    for (i = 1; i <= j; i++)
+    if (j >= 1)
     {
-        Sleep(2000);
-        cout << "\n\nSPACESHIP " << i << " LAUNCH INITIATION\n\n";
-        Sleep(2000);
-        s1.Spacecraft_Code();
-        Sleep(1000);
-        cout << "\nSPACECRAFT " << i << " MISSION COMPLETED!\n\n";
-        Sleep(2000);
+        for (i = 1; i <= j; i++)
+        {
+            Sleep(2000);
+            cout << "\n\nSPACESHIP " << i << " LAUNCH INITIATION\n\n";
+            Sleep(2000);
+            s1.Spacecraft_Code();
+            Sleep(1000);
+            cout << "\nSPACECRAFT " << i << " MISSION COMPLETED!\n\n";
+            Sleep(2000);
+        }
+    }
+    else
+    {
+        cout << "ALERT\n";
+        cout << "SPACECRAFT NOT FOUND!\n\n";
     }
 
     return 0;
