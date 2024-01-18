@@ -167,7 +167,7 @@ int main()
         for (i = 1; i <= j; i++)
         {
             Sleep(2000);
-            cout << "\n\nSPACESHIP " << i << " LAUNCH INITIATION\n\n";
+            cout << "\n\nSPACECRAFT " << i << " LAUNCH INITIATION\n\n";
             Sleep(2000);
             s1.Spacecraft_Code();
             Sleep(1000);
