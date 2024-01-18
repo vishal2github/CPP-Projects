@@ -18,12 +18,16 @@ class Debit
 {
 private:
      int card, pin, amt, i;
+     void process(void);
 
 public:
-     void transaction_process(void);
+     void transaction_process()
+     {
+          process();
+     }
 };
 
-void Debit ::transaction_process()
+void Debit ::process()
 {
      cout << "\n[*PLEASE ENTER YOUR DEBIT-CARD IN THE SLOT*]"
           << "\n";
