@@ -13,7 +13,7 @@ using std::cout;
 class Calculator
 {
 private:
-    float a, b, result;
+    float a, b, r;
     void add(void);
     void sub(void);
     void mul(void);
@@ -27,7 +27,6 @@ void Calculator ::add()
 {
     cout << ":: ADDITION OPERATION SELECTED ::\n";
 
-    float a, b, r;
     cout << "\nENTER TWO NUMBERS";
     cout << "\nThe first number is: ";
     cin >> a;
@@ -43,7 +42,6 @@ void Calculator ::sub()
 {
     cout << ":: SUBTRACTION OPERATION SELECTED ::\n";
 
-    float a, b, r;
     cout << "\nENTER TWO NUMBERS";
     cout << "\nThe first number is: ";
     cin >> a;
@@ -59,7 +57,6 @@ void Calculator ::mul()
 {
     cout << ":: MULTIPLICATION OPERATION SELECTED ::\n";
 
-    float a, b, r;
     cout << "\nENTER TWO NUMBERS";
     cout << "\nThe first number is: ";
     cin >> a;
@@ -75,7 +72,6 @@ void Calculator ::div()
 {
     cout << ":: DIVISION OPERATION SELECTED ::\n";
 
-    float a, b, r;
     cout << "\nENTER TWO NUMBERS";
     cout << "\nThe first number is: ";
     cin >> a;
