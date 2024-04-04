@@ -20,19 +20,24 @@ private:
     void div(void);
 
 public:
+    void setValue(void);
     void calc_process(void);
 };
 
-void Calculator ::add()
+void Calculator ::setValue()
 {
-    cout << ":: ADDITION OPERATION SELECTED ::\n";
-
     cout << "\nENTER TWO NUMBERS";
     cout << "\nThe first number is: ";
     cin >> a;
     cout << "The second number is: ";
     cin >> b;
+}
 
+void Calculator ::add()
+{
+    cout << ":: ADDITION OPERATION SELECTED ::\n";
+
+    setValue();
     r = (a + b);
 
     cout << "\nThe addition of " << a << " and " << b << " is " << r << ".\n";
@@ -42,12 +47,7 @@ void Calculator ::sub()
 {
     cout << ":: SUBTRACTION OPERATION SELECTED ::\n";
 
-    cout << "\nENTER TWO NUMBERS";
-    cout << "\nThe first number is: ";
-    cin >> a;
-    cout << "The second number is: ";
-    cin >> b;
-
+    setValue();
     r = (a - b);
 
     cout << "\nThe subtraction of " << a << " and " << b << " is " << r << ".\n";
@@ -57,12 +57,7 @@ void Calculator ::mul()
 {
     cout << ":: MULTIPLICATION OPERATION SELECTED ::\n";
 
-    cout << "\nENTER TWO NUMBERS";
-    cout << "\nThe first number is: ";
-    cin >> a;
-    cout << "The second number is: ";
-    cin >> b;
-
+    setValue();
     r = (a * b);
 
     cout << "\nThe multiplication of " << a << " and " << b << " is " << r << ".\n";
@@ -72,11 +67,7 @@ void Calculator ::div()
 {
     cout << ":: DIVISION OPERATION SELECTED ::\n";
 
-    cout << "\nENTER TWO NUMBERS";
-    cout << "\nThe first number is: ";
-    cin >> a;
-    cout << "The second number is: \n";
-    cin >> b;
+    setValue();
 
     if (a == 0)
     {
@@ -94,9 +85,10 @@ void Calculator ::div()
 void Calculator ::calc_process()
 {
     char ch;
-    cout << "\nEnter any two numbers whether in form of an integer, decimal or a combination of two.";
-    Sleep(2000);
-    cout << "\nThe operation is performed on the basis of operator selected.";
+    cout << "** CALCULATOR GUIDELINES **";
+    cout << "\n>> Enter any two numbers whether in form of an integer or decimal value.";
+    Sleep(1000);
+    cout << "\n>> Single operation at a time is performed on the basis of operator selected.";
     Sleep(2000);
 
     cout << "\n\nENTER THE OPERATOR (/,*,+,-) : ";
