@@ -3,12 +3,12 @@
 
         > This program asks for user permission in yes and no for launch initiation of an imaginary spacecraft.
         > As our imagined spacecraft takes-off, the information regarding spacecraft technicals displays during entire mission.
-        > One can create multiple objects. Each object can initiate the multiple spacecrafts in series, untill anywhere at the serial point the ingition process is postponed.
+        > One can create multiple objects (Spacecraft fleets). Each object (Spacecraft fleet) can initiate the multiple spacecrafts in series, untill anywhere at the serial point the ingition process is postponed.
 
         >> NOTE
             > In actual, the spacecraft sends the data signals to the satellite receivers of ground station, so this simplified program is only a replication of terminal output of spacecraft data signals in form of human-readable text.
             > This program is only for fun, and is far different from real data receiving and displaying process with the different programming approach.
-            > So, don't take it seriously!
+            > So, take it as fun and enjoy watching as the code process runs by your command... Captain!
 */
 
 #include <iostream>
@@ -17,7 +17,7 @@
 using std::cin;
 using std::cout;
 
-class Spacecraft
+class Spacecraft_Fleet
 {
 private:
     int k;
@@ -28,7 +28,7 @@ public:
     void launch_process();
 };
 
-void Spacecraft ::spacecraft_Code()
+void Spacecraft_Fleet ::spacecraft_Code()
 {
     cout << "SPACECRAFT STATUS\n";
     Sleep(2000);
@@ -151,9 +151,11 @@ void Spacecraft ::spacecraft_Code()
     }
 }
 
-void Spacecraft ::launch_process()
+void Spacecraft_Fleet ::launch_process()
 {
     int i, j;
+    cout << "HELLO CAPTAIN! THE CONTROL IS ALL YOURS.\n";
+    Sleep(1000);
     cout << "ENTER THE NUMBER OF SPACECRAFT(S) YOU WANT TO LAUNCH ONE BY ONE\n";
     cin >> j;
     cout << "\n";
@@ -183,8 +185,8 @@ int main()
 {
     system("cls");
 
-    Spacecraft s1;
-    s1.launch_process();
+    Spacecraft_Fleet fleet1;
+    fleet1.launch_process();
 
     system("pause");
 
