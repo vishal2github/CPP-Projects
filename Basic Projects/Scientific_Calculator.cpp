@@ -18,115 +18,142 @@ private:
      int choice, x, y;
      float a, b, c, result;
 
-     float addition(float a, float b)
+     // Value-setting functions
+
+     void xyVals()
+     {
+          cout << "\n> Enter the first value: ";
+          cin >> x;
+          cout << "> Enter the second value: ";
+          cin >> y;
+     }
+
+     void aVal()
+     {
+          cout << "\n> Enter the value: ";
+          cin >> a;
+     }
+
+     void abVals()
+     {
+          cout << "\n> Enter the first value: ";
+          cin >> a;
+          cout << "> Enter the second value: ";
+          cin >> b;
+     }
+
+     void abcVals()
+     {
+          cout << "\n> Enter the first value: ";
+          cin >> a;
+          cout << "> Enter the second value: ";
+          cin >> b;
+          cout << "> Enter the third value: ";
+          cin >> c;
+     }
+
+     // Calculation-process functions
+
+     void addition()
      {
           cout << "ADDITION OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the first value: ";
-          cin >> a;
-          cout << "> Enter the second value: ";
-          cin >> b;
+
+          abVals();
           result = (a + b);
+
           cout << "\n>> The Addition of " << a << " and " << b << " is " << result << ".\n\n";
-          return result;
      }
 
-     float subtraction(float a, float b)
+     void subtraction()
      {
           cout << "SUBTRACTION OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the first value: ";
-          cin >> a;
-          cout << "> Enter the second value: ";
-          cin >> b;
+
+          abVals();
           result = (a - b);
+
           cout << "\n>> The Subtraction of " << a << " to " << b << " is " << result << ".\n\n";
-          return result;
      }
 
-     float multiplication(float a, float b)
+     void multiplication()
      {
           cout << "MULTIPLICATION OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the first value: ";
-          cin >> a;
-          cout << "> Enter the second value: ";
-          cin >> b;
+
+          abVals();
           result = (a * b);
+
           cout << "\n>> The Multiplication of " << a << " and " << b << " is " << result << ".\n\n";
-          return result;
      }
 
-     float division(float a, float b)
+     void division()
      {
           cout << "DIVISION OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the dividend value: ";
-          cin >> a;
-          cout << "> Enter the divisor value: ";
-          cin >> b;
+
+          abVals();
           result = (a / b);
+
           cout << "\n>> The Division/Quotient of " << a << " to " << b << " is " << result << ".\n\n";
-          return result;
      }
 
-     float modulus(float a, float b)
+     void modulus()
      {
           cout << "MODULUS OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the first integer-only value: ";
-          cin >> x;
-          cout << "> Enter the second integer-only value: ";
-          cin >> y;
+
+          xyVals();
           result = (x % y);
+
           cout << "\n>> The Modulus of " << x << " to " << y << " is " << result << ".\n\n";
-          return result;
      }
 
-     float exponent(float a, float b)
+     void exponent()
      {
           cout << "EXPONENT OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the value: ";
-          cin >> a;
-          cout << "> Enter the exponential value: ";
-          cin >> b;
+
+          abVals();
           result = pow(a, b);
+
           cout << "\n>> The Exponent of " << a << " to " << b << " is " << result << ".\n\n";
-          return result;
      }
 
-     float square_root(float a)
+     void square_root()
      {
           cout << "SQUARE-ROOT OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the value: ";
-          cin >> a;
+
+          aVal();
           result = sqrt(a);
+
           cout << "\n>> The Square-Root of " << a << " is " << result << ".\n\n";
-          return result;
      }
 
-     float cube_root(float a)
+     void cube_root()
      {
           cout << "CUBE-ROOT OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the value: ";
-          cin >> a;
+
+          aVal();
           result = cbrt(a);
+
           cout << "\n>> The Cube-Root of " << a << " is " << result << ".\n\n";
-          return result;
      }
 
      float sin(float a)
      {
           cout << "SIN OPERATION SELECTED\n";
           Sleep(2000);
+
           cout << "\n> Enter the value: ";
           cin >> a;
           result = sin(a);
+
           cout << "\n>> The value of Sin(" << a << ")"
                << " is " << result << ".\n\n";
+
           return result;
      }
 
@@ -194,8 +221,7 @@ private:
      {
           cout << "LOG OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the value: ";
-          cin >> a;
+          aVal();
           result = log(a);
           cout << "\n>> The value of log(" << a << ")"
                << " is " << result << ".\n\n";
@@ -214,95 +240,86 @@ private:
           return result;
      }
 
-     float circle_area(float a)
+     void circle_area()
      {
-          const float PI = 3.14;
           cout << "CIRCLE AREA OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the radius: ";
-          cin >> a;
+
+          aVal();
           result = (PI * a * a);
+
           cout << "\n>> The area of circle with radius " << a << " is " << result << " unit-sq.\n\n";
-          return result;
      }
 
-     float square_area(float a)
+     void square_area()
      {
           cout << "SQUARE AREA OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the side length: ";
-          cin >> a;
+
+          aVal();
           result = (a * a);
+
           cout << "\n>> The area of square with side length " << a << " is " << result << " unit-sq.\n\n";
-          return result;
      }
 
-     float rectangle_area(float a, float b)
+     void rectangle_area()
      {
           cout << "RECTANGLE AREA OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the length: ";
-          cin >> a;
-          cout << "\n> Enter the breadth: ";
-          cin >> b;
+
+          abVals();
           result = (a * b);
+
           cout << "\n>> The area of reactangle with length " << a << " and "
                << "breadth " << b << " is " << result << " unit-sq.\n\n";
-          return result;
      }
 
-     float common_triangle_area(float a, float b)
+     void common_triangle_area()
      {
           // Common Triangle: A polygon with three angles and sides.
 
           cout << "COMMON-TRIANGLE AREA OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the base: ";
-          cin >> a;
-          cout << "\n> Enter the height: ";
-          cin >> b;
+
+          abVals();
           result = (0.5 * (a * b));
+
           cout << "\n>> The area of the common triangle with base " << a << " and height " << b << " is " << result << " unit-sq.\n\n";
-          return result;
      }
 
-     float common_triangle_perimeter(float a, float b, float c)
+     void common_triangle_perimeter()
      {
           cout << "COMMON-TRIANGLE PERIMETER OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the length of first side: ";
-          cin >> a;
-          cout << "\n> Enter the length of second side: ";
-          cin >> b;
-          cout << "\n> Enter the length of third side: ";
-          cin >> c;
+
+          abcVals();
           result = (a + b + c);
+
           cout << "\n>> The perimeter of the common triangle with sides " << a << ", " << b << " and " << c << " is " << result << " unit(s).\n\n";
-          return result;
      }
 
-     float eqlat_triangle_area(float a)
+     void eqlat_triangle_area()
      {
           // Equilateral Triangle: A triangle with all three sides of an equal length.
 
           cout << "EQUILATERAL-TRIANGLE AREA OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the side length: ";
-          cin >> a;
+
+          aVal();
           result = ((sqrt(3) / 4) * (a * a));
+
           cout << "\n>> The area of an equilateral triangle with side length " << a << " is " << result << " unit-sq.\n\n";
-          return result;
      }
 
-     float eqlat_triangle_perimeter(float a)
+     void eqlat_triangle_perimeter()
      {
           cout << "EQUILATERAL-TRIANGLE PERIMETER OPERATION SELECTED\n";
           Sleep(2000);
-          cout << "\n> Enter the length of side: ";
-          cin >> a;
+
+          aVal();
           result = (3 * a);
+
           cout << "\n>> The perimeter of an equilateral triangle with side length " << a << " is " << result << " unit(s).\n\n";
-          return result;
      }
 
 public:
@@ -347,7 +364,7 @@ void Calculator ::calculation()
           << "15. Log\t\t\t\t"
           << "16. Log-B-10\n\n\n";
 
-     // ************************************** [ USER-LAYOUT TO BE ADJUSTED FROM HERE ] ************************************************* 
+     // **************************** [CORRECTION-WARNING: USER-LAYOUT TO BE ADJUSTED FROM HERE ] *************************************
      cout << "GEOMETRIC OPERATIONS\n"
           << "17. Area of Cirle\t\t\t"
           << "18. Area of Square\n";
@@ -370,32 +387,32 @@ void Calculator ::calculation()
      {
      // Basic Operation Case(s)
      case 1:
-          addition(a, b);
+          addition();
           break;
      case 2:
-          subtraction(a, b);
+          subtraction();
           break;
      case 3:
-          multiplication(a, b);
+          multiplication();
           break;
      case 4:
-          division(a, b);
+          division();
           break;
      case 5:
-          modulus(a, b);
+          modulus();
           break;
 
      // Exponential Operation Case(s)
      case 6:
-          exponent(a, b);
+          exponent();
           break;
 
      // Root Operation Case(s)
      case 7:
-          square_root(a);
+          square_root();
           break;
      case 8:
-          cube_root(a);
+          cube_root();
           break;
 
      // Trigonometric Operation Case(s)
@@ -430,25 +447,25 @@ void Calculator ::calculation()
 
      // Geometric Operation Case(s)
      case 17:
-          circle_area(a);
+          circle_area();
           break;
      case 18:
-          square_area(a);
+          square_area();
           break;
      case 19:
-          rectangle_area(a, b);
+          rectangle_area();
           break;
      case 20:
-          common_triangle_area(a, b);
+          common_triangle_area();
           break;
      case 21:
-          common_triangle_perimeter(a, b, c);
+          common_triangle_perimeter();
           break;
      case 22:
-          eqlat_triangle_area(a);
+          eqlat_triangle_area();
           break;
      case 23:
-          eqlat_triangle_perimeter(a);
+          eqlat_triangle_perimeter();
           break;
 
      default:
